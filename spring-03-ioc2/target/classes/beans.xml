@@ -19,8 +19,18 @@
 
     <!--有参构造传参方式3：直接通过参数名来赋值-->
     <bean id="user" class="com.yan.pojo.User">
-        <constructor-arg name="name" value="张三4"></constructor-arg>
+        <constructor-arg name="name" value="张三4"/>
     </bean>
 
-    <bean id="userT" class="com.yan.pojo.UserT"></bean>
+    <!--
+    id: bean的唯一标识符，也就是相当于我们学的对象名
+    class: bean，对象所对应的全限定名：包名 + 类名
+    name: 也是别名，而且name，可以取多个别名
+    -->
+    <bean id="userT" class="com.yan.pojo.UserT" name="user2 u2,u3;u4">
+        <property name="name" value="张三"/>
+    </bean>
+
+<!--    &lt;!&ndash;如果添加了别名，就可以用别名获取这个对象&ndash;&gt;-->
+<!--    <alias name="user" alias="newUser"></alias>-->
 </beans>

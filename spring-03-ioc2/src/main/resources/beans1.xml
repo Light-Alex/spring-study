@@ -7,7 +7,6 @@
 <!--        <property name="name" value="张三"></property>-->
 <!--    </bean>-->
 
-<!--    &lt;!&ndash;构造器注入&ndash;&gt;-->
 <!--    &lt;!&ndash; 有参构造传参方式1: 下标赋值 &ndash;&gt;-->
 <!--    <bean id="user" class="com.yan.pojo.User">-->
 <!--        <constructor-arg index="0" value="张三2"></constructor-arg>-->
@@ -20,7 +19,7 @@
 
     <!--有参构造传参方式3：直接通过参数名来赋值-->
     <bean id="user" class="com.yan.pojo.User">
-        <constructor-arg name="name" value="张三4"/>
+        <constructor-arg name="name" value="张三4"></constructor-arg>
     </bean>
 
     <!--
@@ -28,10 +27,10 @@
     class: bean，对象所对应的全限定名：包名 + 类名
     name: 也是别名，而且name，可以取多个别名
     -->
-    <bean id="userT" class="com.yan.pojo.UserT" name="user2 u2,u3;u4">
-        <property name="name" value="张三"/>
+    <bean id="userT" class="com.yan.pojo.UserT" name="user2 u2,u3;u4,u5">
+        <property name="name" value="张三峰"></property>
     </bean>
 
-<!--    &lt;!&ndash;如果添加了别名，就可以用别名获取这个对象&ndash;&gt;-->
-<!--    <alias name="user" alias="newUser"></alias>-->
+    <!--如果添加了别名，就可以用别名获取这个对象-->
+    <alias name="user" alias="newUser"></alias>
 </beans>
