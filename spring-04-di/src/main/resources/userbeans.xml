@@ -9,5 +9,5 @@
     <bean id="user" class="com.yan.pojo.User" p:name="张三" p:age="18"/>
 
     <!--c命名空间注入，通过构造器注入属性的值: constructor-arg-->
-    <bean id="user2" class="com.yan.pojo.User" c:name="张三丰" c:age="20"/>
+    <bean id="user2" class="com.yan.pojo.User" c:name="张三丰" c:age="20" scope="singleton"/>
 </beans>
