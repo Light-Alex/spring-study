@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
 
 <!--    <bean id="cat" class="com.yan.pojo.Cat"/>-->
 <!--    <bean id="dog" class="com.yan.pojo.Dog"/>-->
@@ -12,11 +16,22 @@
 <!--        <property name="cat" ref="cat"/>-->
 <!--    </bean>-->
 
-    <!--byName自动装配-->
-    <bean id="cat" class="com.yan.pojo.Cat"/>
-    <bean id="dog" class="com.yan.pojo.Dog"/>
+<!--    &lt;!&ndash;自动装配&ndash;&gt;-->
+<!--    <bean id="cat" class="com.yan.pojo.Cat"/>-->
+<!--    <bean id="dog" class="com.yan.pojo.Dog"/>-->
+<!--    &lt;!&ndash;-->
+<!--    byName: 会自动在容器上下文中查找，和自己对象set方法后面的值对应的beanid!-->
+<!--    byType: 会自动在容器上下文中查找，和自己对象set方法参数类型对应的bean!-->
+<!--    &ndash;&gt;-->
+<!--    <bean id="person" class="com.yan.pojo.Person" autowire="byName">-->
+<!--        <property name="name" value="张三"/>-->
+<!--    </bean>-->
 
-    <bean id="person" class="com.yan.pojo.Person" autowire="byName">
-        <property name="name" value="张三"/>
-    </bean>
+    <!--注解实现自动装配-->
+    <!---开启注解的支持-->
+    <context:annotation-config/>
+    <bean id="cat" class="com.yan.pojo.Cat"/>
+    <bean id="dog1" class="com.yan.pojo.Dog"/>
+    <bean id="dog2" class="com.yan.pojo.Dog"/>
+    <bean id="person" class="com.yan.pojo.Person"/>
 </beans>
