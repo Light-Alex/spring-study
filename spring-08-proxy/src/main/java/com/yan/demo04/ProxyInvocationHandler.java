@@ -21,9 +21,11 @@ public class ProxyInvocationHandler implements InvocationHandler {
         return Proxy.newProxyInstance(this.getClass().getClassLoader(), target.getClass().getInterfaces(), this);
     }
 
-    // 处理代理实例，并返回结果
+    // 处理代理实例，并返回结果, InvocationHandler，调用invoke()方法，并返回一个结果
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        log(method.getName());
         // 动态代理的本质，就是使用反射机制实现！
+        // 调用被代理对象的方法
         Object result = method.invoke(target, args);
         return result;
     }

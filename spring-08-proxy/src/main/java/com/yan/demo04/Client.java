@@ -16,6 +16,6 @@ public class Client {
 
         // 动态生成代理类
         UserService proxy = (UserService) pih.getProxy();
-        proxy.add();
+        proxy.query();
     }
 }
