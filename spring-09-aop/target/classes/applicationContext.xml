@@ -43,6 +43,6 @@
 
     <!--方式三: 使用注解方式实现AOP-->
     <bean id="annotationPointCut" class="com.yan.diy.AnnotationPointCut"/>
-    <!--aop注解支持-->
-    <aop:aspectj-autoproxy/>
+    <!--aop注解支持 JDK(默认 proxy-target-class="false") cglib(proxy-target-class="true")-->
+    <aop:aspectj-autoproxy proxy-target-class="false"/>
 </beans>
