@@ -1,36 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 <!--    <bean id="user" class="com.yan.pojo.User">-->
-<!--        <property name="name" value="å¼ ä¸‰"></property>-->
+<!--        <property name="name" value="ÕÅÈý"></property>-->
 <!--    </bean>-->
 
-<!--    &lt;!&ndash; æœ‰å‚æž„é€ ä¼ å‚æ–¹å¼1: ä¸‹æ ‡èµ‹å€¼ &ndash;&gt;-->
+<!--    &lt;!&ndash; ÓÐ²Î¹¹Ôì´«²Î·½Ê½1: ÏÂ±ê¸³Öµ &ndash;&gt;-->
 <!--    <bean id="user" class="com.yan.pojo.User">-->
-<!--        <constructor-arg index="0" value="å¼ ä¸‰2"></constructor-arg>-->
+<!--        <constructor-arg index="0" value="ÕÅÈý2"></constructor-arg>-->
 <!--    </bean>-->
 
-<!--    &lt;!&ndash;æœ‰å‚æž„é€ ä¼ å‚æ–¹å¼2: é€šè¿‡ç±»åž‹èµ‹å€¼(æœ‰ä¸¤ä¸ªå‚æ•°å°±ä¸èƒ½ç”¨äº†ï¼Œæ‰€ä»¥ä¸å»ºè®®ä½¿ç”¨)&ndash;&gt;-->
+<!--    &lt;!&ndash;ÓÐ²Î¹¹Ôì´«²Î·½Ê½2: Í¨¹ýÀàÐÍ¸³Öµ(ÓÐÁ½¸ö²ÎÊý¾Í²»ÄÜÓÃÁË£¬ËùÒÔ²»½¨ÒéÊ¹ÓÃ)&ndash;&gt;-->
 <!--    <bean id="user" class="com.yan.pojo.User">-->
-<!--        <constructor-arg type="java.lang.String" value="å¼ ä¸‰3"/>-->
+<!--        <constructor-arg type="java.lang.String" value="ÕÅÈý3"/>-->
 <!--    </bean>-->
 
-    <!--æœ‰å‚æž„é€ ä¼ å‚æ–¹å¼3ï¼šç›´æŽ¥é€šè¿‡å‚æ•°åæ¥èµ‹å€¼-->
+    <!--ÓÐ²Î¹¹Ôì´«²Î·½Ê½3£ºÖ±½ÓÍ¨¹ý²ÎÊýÃûÀ´¸³Öµ-->
     <bean id="user" class="com.yan.pojo.User">
-        <constructor-arg name="name" value="å¼ ä¸‰4"></constructor-arg>
+        <constructor-arg name="name" value="ÕÅÈý4"></constructor-arg>
     </bean>
 
     <!--
-    id: beançš„å”¯ä¸€æ ‡è¯†ç¬¦ï¼Œä¹Ÿå°±æ˜¯ç›¸å½“äºŽæˆ‘ä»¬å­¦çš„å¯¹è±¡å
-    class: beanï¼Œå¯¹è±¡æ‰€å¯¹åº”çš„å…¨é™å®šåï¼šåŒ…å + ç±»å
-    name: ä¹Ÿæ˜¯åˆ«åï¼Œè€Œä¸”nameï¼Œå¯ä»¥å–å¤šä¸ªåˆ«å
+    id: beanµÄÎ¨Ò»±êÊ¶·û£¬Ò²¾ÍÊÇÏàµ±ÓÚÎÒÃÇÑ§µÄ¶ÔÏóÃû
+    class: bean£¬¶ÔÏóËù¶ÔÓ¦µÄÈ«ÏÞ¶¨Ãû£º°üÃû + ÀàÃû
+    name: Ò²ÊÇ±ðÃû£¬¶øÇÒname£¬¿ÉÒÔÈ¡¶à¸ö±ðÃû
     -->
     <bean id="userT" class="com.yan.pojo.UserT" name="user2 u2,u3;u4,u5">
-        <property name="name" value="å¼ ä¸‰å³°"></property>
+        <property name="name" value="ÕÅÈý·å"></property>
     </bean>
 
-    <!--å¦‚æžœæ·»åŠ äº†åˆ«åï¼Œå°±å¯ä»¥ç”¨åˆ«åèŽ·å–è¿™ä¸ªå¯¹è±¡-->
+    <!--Èç¹ûÌí¼ÓÁË±ðÃû£¬¾Í¿ÉÒÔÓÃ±ðÃû»ñÈ¡Õâ¸ö¶ÔÏó-->
     <alias name="user" alias="newUser"></alias>
 </beans>
